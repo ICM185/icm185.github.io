@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Mono:wght@100&display=swap');
 
 * {
     margin: 0;
@@ -115,6 +116,105 @@ h3 {
     width: 300px;
     height: 40px;
     border-radius: 25px;
+}
+
+
+
+/*preloader*/
+
+:root {
+    --bg-color: hsl(49 37% 94%);
+    --typewriterSpeed: 2s;
+    --typewriterCharacters: 7;
+}
+
+
+
+#preloader {
+    background: hsl(49 37% 94%);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background: var(--bg-color);
+    
+   
+    
+    
+}
+
+
+
+
+#preh1 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: "Roboto Mono", sans ;
+    position: relative;
+    width: max-content;
+    
+  }
+  
+#preh1::before,
+#preh1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+#preh1::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  
+#preh1::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 1s forwards,
+      blink 750ms steps(var(--typewriterCharacters)) infinite;
+  }
+  
+.subtitle {
+    color: hsl(0 0% 0% / 0.7);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+  }
+  
+@keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  
+@keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+  
+@keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+iframe{
+  display: none;
 }
 
 
