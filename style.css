@@ -99,3 +99,15 @@ button:hover{
     display: block;
   
 }
+
+/*discord.html preloader*/
+
+#abtprel {
+    background: rgb(246, 244, 246) url(images/BlackandwhiteImpossibleFalcon-size_restricted.gif) no-repeat center center;
+    height: 100vh ;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+
+
+}
